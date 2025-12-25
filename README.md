@@ -89,3 +89,6 @@ MIT License. Feel free to fork and modify!
 
 ---
 *Built with ❤️ by Ashu Mishra*
+
+### 🤝 Connect with Me
+For more exciting projects, please follow **[Ashu Mishra](https://www.linkedin.com/in/ashumish/)** on LinkedIn, and get in touch to discuss more on AI! 🚀
