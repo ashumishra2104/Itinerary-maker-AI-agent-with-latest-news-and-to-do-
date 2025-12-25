@@ -127,14 +127,15 @@ def get_weather(latitude: float, longitude: float, timezone: str = "UTC") -> Dic
 
 
 
-def generate_daily_image(location: str, activity_highlight: str) -> str:
+def generate_daily_image(location: str, activity_highlight: str):
     """
     Generate an exciting image for the day's itinerary using DALL-E 3
+    Returns: (image_url, error_message)
     """
     try:
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
-            return None
+            return None, "OpenAI API Key not found. Check .env or Secrets."
 
         from openai import OpenAI
         client = OpenAI(api_key=api_key)
@@ -149,10 +150,10 @@ def generate_daily_image(location: str, activity_highlight: str) -> str:
             n=1,
         )
 
-        return response.data[0].url
+        return response.data[0].url, None
     except Exception as e:
         print(f"Image Gen Error: {e}")
-        return None
+        return None, str(e)
 
 
 def get_attractions(location: str, limit: int = 5) -> List[Dict[str, Any]]:
@@ -1415,12 +1416,12 @@ def main():
                         st.info("🎨 Visualize this day!")
                         if st.button(f"✨ Generate Day {day_num} Visual", key=f"btn_{day_num}"):
                             with st.spinner("Creating unique visual..."):
-                                img_url = generate_daily_image(day_info['location'], day_info['highlight'])
+                                img_url, error_msg = generate_daily_image(day_info['location'], day_info['highlight'])
                                 if img_url:
                                     st.session_state.daily_images[img_key] = img_url
                                     st.rerun()
                                 else:
-                                    st.error("Could not generate image.")
+                                    st.error(f"Image Generation Failed: {error_msg}")
             
             # Display News Section
             if itinerary_data.get('news'):
