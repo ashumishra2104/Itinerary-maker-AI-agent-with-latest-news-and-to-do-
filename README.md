@@ -13,11 +13,23 @@ Welcome to the **Iteration Planner Agent**, a powerful Streamlit application des
 *   **📄 PDF Export:** Downloads a beautifully formatted, image-rich PDF itinerary to take with you offline.
 *   **💰 Currency Support:** Fully localized for Indian Rupees (₹) and US Dollars ($).
 
-## 🚀 Live Demo & Video
+## 🚀 Live Demo & Walkthrough
 
-*(Add your video link here)*
+Watch the agent in action planning a trip to **Mumbai**:
 
-Check out the [Sample Itinerary PDF](sample_itinerary.pdf) included in this repository to see the output quality!
+![App Walkthrough](demo_walkthrough.webp)
+
+*Note: The video above shows the full flow from search to PDF generation.*
+
+### 📍 Example User Journey (Mumbai Trip)
+1.  **Search:** User starts from "New Delhi" and searches for "Mumbai".
+2.  **Budget:** User sets a strict budget of **₹50,000** for **4 Days**.
+3.  **Generate:** The agent processes weather, hotels, and attractions.
+4.  **Results:**
+    *   **Hotels:** Finds highly-rated hotels costing ~₹6,000-8,000/night (within 50-75% budget rule).
+    *   **Visuals:** User clicks "✨ Generate Day 1 Visual" and gets a custom AI image of the Mumbai skyline.
+    *   **News:** Agent displays upcoming events like "Design Mumbai 2025" and music festivals.
+5.  **Download:** User downloads the complete **[Sample Itinerary PDF](sample_itinerary.pdf)**.
 
 ## 🛠️ Tech Stack
 
