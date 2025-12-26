@@ -4,6 +4,8 @@
 
 Welcome to the **Iteration Planner Agent**, a powerful Streamlit application designed to plan your trips down to the finest detail. Whether you're a budget backpacker or a luxury traveler, this agent uses AI to curate a personalized schedule, find strictly budgeted hotels, discover local attractions, and even keep you updated with the latest happenings in your destination.
 
+> **📚 Want to build this yourself?** Check out the [**Complete Step-by-Step Guide**](AI_TRAVEL_AGENT_COMPLETE_GUIDE.md) included in this repository!
+
 ## 🌟 Key Features
 
 *   **⚡ AI-Powered Itineraries:** Generates day-by-day travel plans using OpenAI's GPT models, customized for your vibe and pace.
