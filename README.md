@@ -15,6 +15,8 @@ Welcome to the **Iteration Planner Agent**, a powerful Streamlit application des
 
 ## 🚀 Live Demo & Walkthrough
 
+🌟 **Try the Live App here:** [https://aitravelagentiterator.streamlit.app/](https://aitravelagentiterator.streamlit.app/)
+
 Watch the agent in action planning a trip to **Mumbai**:
 
 ![App Walkthrough](demo_walkthrough.webp)
