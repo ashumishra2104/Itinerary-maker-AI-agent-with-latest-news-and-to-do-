@@ -5,7 +5,7 @@ This diagram illustrates the logical flow of the `app.py` Streamlit application,
 ```mermaid
 flowchart TD
     Start([Start Application]) --> Config[Streamlit Page Config & CSS]
-    Config --> InitLoad[Load Environment Variables (.env)]
+    Config --> InitLoad[Load Environment Variables .env]
     
     subgraph UI_Input["User Interface & Input"]
         Sidebar[Sidebar: Configuration]
@@ -22,7 +22,7 @@ flowchart TD
     
     InitLoad --> UI_Input
     
-    GenerateBtn{User Clicks\n'Generate Itinerary'}
+    GenerateBtn{User Clicks Generate Itinerary}
     UI_Input --> GenerateBtn
     
     GenerateBtn -- No --> Wait[Wait for Input]
@@ -65,7 +65,7 @@ flowchart TD
         DispItinerary --> ExportSection[Download Section]
     end
     
-    ExportSection --> GenPDF[Generate PDF (ReportLab)]
+    ExportSection --> GenPDF[Generate PDF ReportLab]
     ExportSection --> GenTxt[Generate Text File]
     
     GenPDF --> DownloadPDF[Download PDF Button]
@@ -73,7 +73,7 @@ flowchart TD
     
     style Start fill:#f9f,stroke:#333,stroke-width:2px
     style GenerateBtn fill:#bbf,stroke:#333,stroke-width:2px
-    style Core_Logic fill:#e1f5fe,stroke:#01579b,stroke-width:2px,stroke-dasharray: 5 5
+    style Core_Logic fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style UI_Output fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
